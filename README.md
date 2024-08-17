@@ -21,14 +21,42 @@ completion.
 git clone https://github.com/sumanshekhar435/Mini-Email-Campaign-Application.git
 cd Mini-Email-Campaign-Application
 
+```
+### Install PHP Dependencies
 composer install
+
+### Install JavaScript Dependencies
 npm install
+
+### Set Up Environment Configuration
 cp .env.example .env
+
+Edit the .env file to configure your environment settings. Ensure it includes the following Mail settings:
+MAIL_MAILER=smtp
+MAIL_HOST=
+MAIL_PORT=2525
+MAIL_USERNAME=
+MAIL_PASSWORD=
+
+### Generate Application Key
 php artisan key:generate
+
+### Set Up the Database (Create a new database and configure it in .env. Then run:)
+
 php artisan migrate
+
+### Configure File Storage
 php artisan storage:link
+
+### Build the Frontend Assets
 npm run dev
+
+### Run the Application
 php artisan serve
 Use this url in browser http://127.0.0.1:8000/
+
+### Set Up Queue Workers
 php artisan queue:work
+
+### run specific test
 php artisan test --filter=CSVValidationTest
