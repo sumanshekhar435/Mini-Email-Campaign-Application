@@ -11,7 +11,7 @@ use Illuminate\Foundation\Testing\WithoutMiddleware;
 
 class CSVValidationTest extends TestCase
 {
-    use WithoutMiddleware;
+    use RefreshDatabase, WithoutMiddleware;
 
     /**
      * Test CSV file validation with valid data.

@@ -29,5 +29,6 @@ php artisan migrate
 php artisan storage:link
 npm run dev
 php artisan serve
+Use this url in browser http://127.0.0.1:8000/
 php artisan queue:work
 php artisan test --filter=CSVValidationTest
